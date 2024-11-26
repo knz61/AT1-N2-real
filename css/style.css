@@ -1,0 +1,215 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografia */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Cabeçalho */
+header {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+header h1 {
+    float: left;
+    margin-left: 20px;
+}
+
+header nav {
+    float: right;
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Seções */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0059ff;
+}
+
+/* Sobre Mim */
+.foto-perfil {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Habilidades */
+#habilidades ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#habilidades ul li {
+    background: #000000;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Projetos */
+.projeto {
+    margin-bottom: 30px;
+}
+
+.projeto h3 {
+    color: #0059ff;
+}
+
+.projeto img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background: #0059ff;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background: #303430;
+}
+
+/* Redes Sociais */
+.redes-sociais {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0059ff;
+}
+
+/* Rodapé */
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Galeria */
+#galeria .grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#galeria .grade img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#galeria .grade img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* MENU MOBILE - Media Queries */
+
+/* No desktop o menu será horizontal */
+@media (max-width: 768px) {
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    /* Menu em dispositivos móveis - organização vertical */
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Tornar o título (h1) centralizado em telas pequenas */
+    header h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+}
